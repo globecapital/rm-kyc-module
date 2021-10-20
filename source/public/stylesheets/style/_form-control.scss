@@ -1,0 +1,144 @@
+//
+// Forms
+// --------------------------------------------------
+label {
+	font-weight: 400;
+	font-size: 90%;
+}
+
+.form-control {
+	// border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+	border-width: 1px;
+	background-color: transparent;
+}
+
+.form-group {
+	position: relative;
+	margin-bottom: $form-group-margin;
+	.error {
+		font-size: 75%;
+		color: $danger;
+		margin-left: $font-size-base * 0.5;
+	}
+	label,
+	.control-label {
+		font-size: 90%;
+		font-weight: 400;
+		font-family: $font-family-poppins;
+		position: absolute;
+		left: 16px;
+		z-index: 3;
+		top: $small-font-size;
+		color: lighten($input-color, 30%);
+		line-height: 1;
+		border-radius: $border-radius-lg;
+		padding: 2px 5px;
+		@include transition(0.15s ease-out);
+	}
+
+	&.label-floating {
+		.form-control {
+			position: relative;
+			z-index: 10;
+		}
+		&.is-value,
+		&.is-focused,
+		&.is-filled {
+			.control-label {
+				z-index: 20;
+			}
+		}
+	}
+
+	&.text-floating {
+		.control-label {
+			// top: -$font-size-base * 0.5;
+			background-color: $white;
+			color: $primary;
+			font-size: 75%;
+		}
+		&.is-focused,
+		&.is-filled {
+			.control-label {
+				z-index: 20;
+			}
+		}
+		label,
+		.control-label {
+			position: relative;
+			top: auto;
+			left: auto;
+			padding: 0;
+		}
+		&.verified {
+		}
+	}
+
+	&.text-verified {
+		position: relative;
+		.control-label {
+			// top: -$font-size-base * 0.5;
+			background-color: transparent;
+			color: $gray-600;
+			font-size: 75%;
+		}
+		.text-control {
+			font-family: $font-family-poppins;
+			font-size: 110%;
+			font-weight: 500;
+		}
+		.help-text {
+			text-align: right;
+			// margin: 0;
+			// padding: 0;
+			// position: absolute;
+			// bottom: $font-size-base * 0.25;
+			// right: 0;
+			// z-index: 2;
+			font-size: 70%;
+		}
+		.help-edit {
+			@include opacity(0.5);
+			cursor: pointer;
+			font-size: 65%;
+			font-weight: 600;
+			margin-left: $font-size-base * 0.6;
+			&:hover,
+			&:focus {
+				@include opacity(1);
+			}
+			img {
+				margin-right: $font-size-base * 0.1;
+			}
+		}
+	}
+
+	&.is-focused,
+	&.selected {
+		.control-label {
+			top: -$font-size-base * 0.6;
+			background-color: $white;
+			color: $primary;
+			font-size: 75%;
+		}
+		.form-control {
+			//	border-color: $input-border-focus;
+		}
+		.icons {
+			// color: $input-border-focus;
+		}
+	}
+	&.is-filled,
+	&.is-value {
+		.control-label {
+			top: -$font-size-base * 0.4;
+			background-color: $white;
+			//	color: $primary;
+			font-size: 75%;
+		}
+	}
+}
+
+// textarea {
+// 	resize: vertical;
+// }
