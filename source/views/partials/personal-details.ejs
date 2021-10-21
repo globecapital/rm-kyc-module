@@ -134,50 +134,63 @@
                   <label for="">Are you Politically exposed?</label>
                   <div class="btn-radio-flex">
                     <div class="btn-radio-box btn-input-box">
-                      <input type="radio"  value="Yes" data-id="politically" name="politicallyExposed">
+                      <input type="radio" value="Yes" data-id="politically" data-show="showpolitically" name="politicallyExposed">
                       <span>Yes</span>
                     </div>
                     <div class="btn-radio-box btn-input-box">
-                      <input type="radio" checked value="No" data-id="politically" name="politicallyExposed">
+                      <input type="radio" checked value="No" data-id="politically" data-show="showpExposed" name="politicallyExposed">
                       <span>No</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="row">
-              <div class="col-4">
-                <div class="form-group-box">
-                  <label for="">Is India your country of tax residency?</label>
-                  <div class="btn-radio-flex" id="countryTaxResidency">
-                    <div class="btn-radio-box btn-input-box">
-                      <input type="radio" checked value="Yes" data-id="countryTaxResidency" name="taxResidency">
-                      <span>Yes</span>
-                    </div>
-                    <div class="btn-radio-box btn-input-box">
-                      <input type="radio" value="No" data-id="countryTaxResidency" name="taxResidency">
-                      <span>No</span>
-                    </div>
+            <div id="showpolitically" class="no-display">
+              <div class="row">
+                <div class="col-4">
+                  <div class="form-group">
+                    <label class="select-label" for="">Country of Birth</label>
+                    <input type="text" class="form-control" placeholder="Country of Birth">
                   </div>
                 </div>
-
-              </div>
-              <div class="col-4">
-                <div class="form-group-box" id="politically">
-                  <label for="">Are you Politically exposed?</label>
-                  <div class="btn-radio-flex">
-                    <div class="btn-radio-box btn-input-box">
-                      <input type="radio"  value="Yes" data-id="politically" name="politicallyExposed">
-                      <span>Yes</span>
-                    </div>
-                    <div class="btn-radio-box btn-input-box">
-                      <input type="radio" checked value="No" data-id="politically" name="politicallyExposed">
-                      <span>No</span>
-                    </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label class="select-label" for="">Citizenship</label>
+                    <input type="text" class="form-control" placeholder="Citizenship">
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-4">
+                  <div class="form-group">
+                    <label class="select-label" for="">Country of Tax Residency</label>
+                    <select class="form-control">
+                      <option data-select2-id="select2-data-12-7vil">Country of Tax Residency</option>
+                      <option data-select2-id="select2-data-17-cgqz">Country of Tax Residency</option>
+                      <option data-select2-id="select2-data-18-u2lo">Country of Tax Residency</option>
+                      <option data-select2-id="select2-data-19-917c">Country of Tax Residency</option>
+                      <option data-select2-id="select2-data-20-kvw8">Country of Tax Residency</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <label class="select-label" for="">Tax payer identification number</label>
+                    <input type="text" class="form-control" value="12345647989" placeholder="Tax payer identification number">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <div class="form-group">
+                    <label class="select-label" for="">Place of Birth </label>
+                    <input type="text" class="form-control" placeholder="New York">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="showpExposed" class="no-display">
+              asasas
             </div>
           </div>
           <div class="d-grid gap-3 d-md-block">

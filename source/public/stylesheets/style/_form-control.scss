@@ -9,7 +9,6 @@ label {
 .form-control {
 	// border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
 	border-width: 1px;
-	background-color: transparent;
 }
 
 .form-group {
@@ -46,6 +45,9 @@ label {
 	}
 
 	&.label-floating {
+		.form-control {
+			background-color: transparent;
+		}
 		.form-control {
 			position: relative;
 			z-index: 10;

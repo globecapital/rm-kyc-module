@@ -734,6 +734,7 @@
     var $this = $(this);
     var $inputs = $this.find('input');
     var $inputId = $inputs.data('id');
+    var $inputShow = $inputs.data('show');
 
     if ($inputs.prop('checked')) {
       $inputs.parents('.btn-input-box').addClass('active');
@@ -742,6 +743,13 @@
     $inputs.on('change', function () {
       $(`#${$inputId} .btn-input-box`).removeClass('active')
       $inputs.parents('.btn-input-box').addClass('active');
+
+      if ($inputShow) {
+        console.log($inputShow);
+        $(`#${$inputShow}`).show();
+      }
+
+
     });
   });
 
