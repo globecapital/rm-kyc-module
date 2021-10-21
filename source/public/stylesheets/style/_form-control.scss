@@ -22,7 +22,7 @@ label {
 	}
 	label,
 	.control-label {
-		font-size: 90%;
+		font-size: 85%;
 		font-weight: 400;
 		font-family: $font-family-poppins;
 		position: absolute;
@@ -34,6 +34,15 @@ label {
 		border-radius: $border-radius-lg;
 		padding: 2px 5px;
 		@include transition(0.15s ease-out);
+	}
+	label.select-label {
+		position: relative;
+		top: auto;
+		left: auto;
+		padding: 0;
+		color: $black;
+		font-weight: 600;
+		margin-bottom: $font-size-base * 0.4;
 	}
 
 	&.label-floating {

@@ -654,7 +654,7 @@
                         <input type="number" class="form-control" value="" placeholder="Referal Code">
                     </div>
                     <button class="gc_btn_primary_v2 gc_btn_fluid_mob">Verify Code</button>
-                    <button class="gc_btn_secondary_v2 gc_btn_fluid_mob" data-dismiss="modal" aria-label="Close">Don't
+                    <button class="gc_btn_secondary_v2 gc_btn_fluid_mob" data-bs-dismiss="modal" aria-label="Close">Don't
                         Have</button>
                 </div>
             </form>
@@ -677,7 +677,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary bold" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
                 </div>
             </form>
@@ -701,7 +701,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary bold" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
                 </div>
             </form>
@@ -711,6 +711,21 @@
 
 <script type="text/javascript">
   // OTP page code
+  $('.btn-input-box').each(function () {
+    var $this = $(this);
+    var $inputs = $this.find('input');
+    var $inputId = $inputs.data('id');
+
+    if ($inputs.prop('checked')) {
+      $inputs.parents('.btn-input-box').addClass('active');
+    }
+
+    $inputs.on('change', function () {
+      $(`#${$inputId} .btn-input-box`).removeClass('active')
+      $inputs.parents('.btn-input-box').addClass('active');
+    });
+  });
+
   $('.switch-otp').each(function () {
     var $toggleOtp = $(this);
     otpCardId = $toggleOtp.data('id');
@@ -745,8 +760,7 @@
       }
     }
   }
-
-  // timer
+  // timer   
 
   $('.otp-resend-btn').each(function () {
     let timerOn = true;
@@ -761,7 +775,7 @@
       remaining -= 1;
 
       if (remaining >= 0 && timerOn) {
-        document.getElementById('timer').style.display = "block";
+        document.getElementById('timer').style.display = 'block';
         setTimeout(function () {
           timer(remaining);
         }, 1000);
@@ -774,7 +788,7 @@
       }
 
       // Do timeout stuff here
-      document.getElementById('timer').style.display = "none";
+      document.getElementById('timer').style.display = 'none';
       // $('.resend_otp_dis').removeClass('disable');
       $('.otp-resend-btn').removeClass('disable');
     }
@@ -785,13 +799,12 @@
       $(this).addClass('disable');
       $('.gc_resend_text').text('resent');
       // $('.resend_otp_dis').addClass('disable');
-      timer($(this).data("time"));
-    })
+      timer($(this).data('time'));
+    });
   });
 
   $('.view-pdf').on('click', function () {
     var pdf_link = $(this).attr('href');
-
   });
 </script>
 </body>

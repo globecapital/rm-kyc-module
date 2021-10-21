@@ -97,6 +97,19 @@ $(function () {
 	});
 
 	$('.pickDate').attr('autocomplete', 'off');
+
+	// checkbox
+	// $('.btn-checkbox-box input').each(function () {
+	// 	$(this).prop('checked')
+	// 		? $(this).parents('.btn-checkbox-box').addClass('checked')
+	// 		: $(this).parents('.btn-checkbox-box').removeClass('checked');
+	// });
+
+	// $('.btn-radio-box input').each(function () {
+	// 	$(this).prop('checked')
+	// 		? $(this).parents('.btn-radio-box').addClass('checked')
+	// 		: $(this).parents('.btn-radio-box').removeClass('checked');
+	// });
 });
 
 // JQuery UI Datepicker Config
@@ -175,23 +188,12 @@ $(window).on('load', function () {
 	svgInline();
 	//	signaturePad();
 
-	// checkbox
-	$('.btn-checkbox-box input').each(function () {
-		$(this).prop('checked')
-			? $(this).parents('.btn-checkbox-box').addClass('checked')
-			: $(this).parents('.btn-checkbox-box').removeClass('checked');
-	});
-
-	$('.btn-radio-box input').each(function () {
-		$(this).prop('checked')
-			? $(this).parents('.btn-radio-box').addClass('checked')
-			: $(this).parents('.btn-radio-box').removeClass('checked');
-	});
-
 	// data-aos-delay remove on mobile
 	if ($(window).width() < 768) {
 		$('div').each(function () {
 			$(this).attr('data-aos-delay', '0');
 		});
 	}
+	//
+
 });

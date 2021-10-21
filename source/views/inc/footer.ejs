@@ -95,6 +95,21 @@
 
 <script type="text/javascript">
   // OTP page code
+  $('.btn-input-box').each(function () {
+    var $this = $(this);
+    var $inputs = $this.find('input');
+    var $inputId = $inputs.data('id');
+
+    if ($inputs.prop('checked')) {
+      $inputs.parents('.btn-input-box').addClass('active');
+    }
+
+    $inputs.on('change', function () {
+      $(`#${$inputId} .btn-input-box`).removeClass('active')
+      $inputs.parents('.btn-input-box').addClass('active');
+    });
+  });
+
   $('.switch-otp').each(function () {
     var $toggleOtp = $(this);
     otpCardId = $toggleOtp.data('id');
@@ -129,8 +144,7 @@
       }
     }
   }
-
-  // timer
+  // timer   
 
   $('.otp-resend-btn').each(function () {
     let timerOn = true;
@@ -145,7 +159,7 @@
       remaining -= 1;
 
       if (remaining >= 0 && timerOn) {
-        document.getElementById('timer').style.display = "block";
+        document.getElementById('timer').style.display = 'block';
         setTimeout(function () {
           timer(remaining);
         }, 1000);
@@ -158,7 +172,7 @@
       }
 
       // Do timeout stuff here
-      document.getElementById('timer').style.display = "none";
+      document.getElementById('timer').style.display = 'none';
       // $('.resend_otp_dis').removeClass('disable');
       $('.otp-resend-btn').removeClass('disable');
     }
@@ -169,12 +183,11 @@
       $(this).addClass('disable');
       $('.gc_resend_text').text('resent');
       // $('.resend_otp_dis').addClass('disable');
-      timer($(this).data("time"));
-    })
+      timer($(this).data('time'));
+    });
   });
 
   $('.view-pdf').on('click', function () {
     var pdf_link = $(this).attr('href');
-
   });
 </script>

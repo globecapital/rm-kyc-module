@@ -76,6 +76,19 @@
 
 //
 
+// scss-docs-start btn-variant-loops
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+} 
+
+@each $color, $value in $theme-colors {
+  .btn-radio-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
 .btn-radio-box {
 	input {
 	}

@@ -79,28 +79,183 @@
         <form action="personal-details.html">
           <div class="yourself-block">
             <div class="row">
-              <div class="col">
-                Column
+              <div class="col-4">
                 <div class="form-group-box">
                   <label for="">Gender</label>
-                  <div class="btn-radio-flex">
-                    <div class="btn-radio-box">
-                      <input type="radio" checked="" name="radio1">
+                  <div class="btn-radio-flex" id="radio1">
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" checked value="Male" data-id="radio1" name="radio1">
                       <span>Male</span>
                     </div>
-                    <div class="btn-radio-box">
-                      <input type="radio" name="radio1">
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" value="Female" data-id="radio1" name="radio1">
                       <span>Female</span>
                     </div>
                   </div>
                 </div>
+
               </div>
-              <div class="col">
-                Column
+              <div class="col-4">
+                <div class="form-group-box" id="radio2">
+                  <label for="">Marital Status</label>
+                  <div class="btn-radio-flex">
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" checked value="Male" data-id="radio2" name="radio2">
+                      <span>Single</span>
+                    </div>
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" value="Female" data-id="radio2" name="radio2">
+                      <span>Married</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col">
-                Column
+            </div>
+            <div class="row ">
+              <div class="col-4">
+                <div class="form-group">
+                  <label class="select-label" for="">Employment status</label>
+                  <select class="form-control">
+                    <option data-select2-id="select2-data-3-kcn2">Business 1</option>
+                    <option data-select2-id="select2-data-17-dpe6">Business 2</option>
+                    <option data-select2-id="select2-data-18-6h79">Business 3</option>
+                    <option data-select2-id="select2-data-19-4pib">Business 4</option>
+                    <option data-select2-id="select2-data-20-b4mz">Business 1</option>
+                    <option data-select2-id="select2-data-21-ru9h">Business 2</option>
+                    <option data-select2-id="select2-data-22-ykeu">Business 3</option>
+                    <option data-select2-id="select2-data-23-fraa">Business 4</option>
+                  </select>
+                </div>
               </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label class="select-label" for="">Annual income</label>
+                  <select class="form-control">
+                    <option data-select2-id="select2-data-6-rpko">Below 1Lakh</option>
+                    <option>Below 1Lakh</option>
+                    <option>Below 1Lakh</option>
+                    <option>Below 1Lakh</option>
+                    <option>Below 1Lakh</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-4">
+                <div class="form-group">
+                  <label class="select-label" for="">Father's Name</label>
+                  <input type="text" class="form-control" placeholder="Father's Name">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label class="select-label" for="">Any trading experience?</label>
+                  <select class="form-control">
+                    <option data-select2-id="select2-data-9-5kew">Less than 1 year</option>
+                    <option data-select2-id="select2-data-31-aepn">Less than 1 year</option>
+                    <option data-select2-id="select2-data-32-s9kf">Less than 1 year</option>
+                    <option data-select2-id="select2-data-33-hxn8">Less than 1 year</option>
+                    <option data-select2-id="select2-data-34-n7lt">Less than 1 year</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-4">
+                <div class="form-group">
+                  <label class="select-label" for="">Whats your education qualification?</label>
+                  <select class="form-control">
+                    <option data-select2-id="select2-data-15-x1mt">Diploma</option>
+                    <option data-select2-id="select2-data-37-u3q5">Diploma</option>
+                    <option data-select2-id="select2-data-38-a5tk">Diploma</option>
+                    <option data-select2-id="select2-data-39-jw3i">Diploma</option>
+                    <option data-select2-id="select2-data-40-mtwv">Diploma</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group-box">
+                  <label for="">Is India your country of tax residency?</label>
+                  <div class="btn-radio-flex" id="countryTaxResidency">
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" checked value="Yes" data-id="countryTaxResidency" name="taxResidency">
+                      <span>Yes</span>
+                    </div>
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" value="No" data-id="countryTaxResidency" name="taxResidency">
+                      <span>No</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-4">
+                <div class="form-group-box" id="politically">
+                  <label for="">Are you Politically exposed?</label>
+                  <div class="btn-radio-flex">
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio"  value="Yes" data-id="politically" name="politicallyExposed">
+                      <span>Yes</span>
+                    </div>
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" checked value="No" data-id="politically" name="politicallyExposed">
+                      <span>No</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group-box">
+                  <label for="">Is India your country of tax residency?</label>
+                  <div class="btn-radio-flex" id="countryTaxResidency">
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" checked value="Yes" data-id="countryTaxResidency" name="taxResidency">
+                      <span>Yes</span>
+                    </div>
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" value="No" data-id="countryTaxResidency" name="taxResidency">
+                      <span>No</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-4">
+                <div class="form-group-box" id="politically">
+                  <label for="">Are you Politically exposed?</label>
+                  <div class="btn-radio-flex">
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio"  value="Yes" data-id="politically" name="politicallyExposed">
+                      <span>Yes</span>
+                    </div>
+                    <div class="btn-radio-box btn-input-box">
+                      <input type="radio" checked value="No" data-id="politically" name="politicallyExposed">
+                      <span>No</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid gap-3 d-md-block">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="authentication">
+              <label class="form-check-label" for="authentication">Quarterly Running Account authentication</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                I
+                accept the&nbsp; <a class="view-tirms" data-bs-toggle="modal"
+                  data-pdf="https://docs.marklogic.com/guide/node-dev.pdf" data-bs-target="#terms">terms &amp;
+                  conditions</a>
+              </label>
             </div>
           </div>
 
@@ -114,6 +269,24 @@
       <!-- /step 1 -->
 
     </div>
+
+    <script type="text/javascript">
+      $('.btn-radio-box input').each(function () {
+        // $(this).prop('checked') ?
+        //   $(this).parents('.btn-radio-box').addClass('checked') :
+        //   $(this).parents('.btn-radio-box').removeClass('checked');
+
+        $(this).on('change', function () {
+          if ($(this).parents('.btn-radio-box').hasClass('checked')) {
+            $(this).parents('.btn-radio-box').addClass('checked');
+          } else {
+            $(this).parents('.btn-radio-box').removeClass('checked');
+          }
+
+        });
+
+      });
+    </script>
 
   </div>
 </section>
@@ -679,7 +852,7 @@
                         <input type="number" class="form-control" value="" placeholder="Referal Code">
                     </div>
                     <button class="gc_btn_primary_v2 gc_btn_fluid_mob">Verify Code</button>
-                    <button class="gc_btn_secondary_v2 gc_btn_fluid_mob" data-dismiss="modal" aria-label="Close">Don't
+                    <button class="gc_btn_secondary_v2 gc_btn_fluid_mob" data-bs-dismiss="modal" aria-label="Close">Don't
                         Have</button>
                 </div>
             </form>
@@ -702,7 +875,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary bold" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
                 </div>
             </form>
@@ -726,7 +899,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary bold" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
                 </div>
             </form>
@@ -736,6 +909,21 @@
 
 <script type="text/javascript">
   // OTP page code
+  $('.btn-input-box').each(function () {
+    var $this = $(this);
+    var $inputs = $this.find('input');
+    var $inputId = $inputs.data('id');
+
+    if ($inputs.prop('checked')) {
+      $inputs.parents('.btn-input-box').addClass('active');
+    }
+
+    $inputs.on('change', function () {
+      $(`#${$inputId} .btn-input-box`).removeClass('active')
+      $inputs.parents('.btn-input-box').addClass('active');
+    });
+  });
+
   $('.switch-otp').each(function () {
     var $toggleOtp = $(this);
     otpCardId = $toggleOtp.data('id');
@@ -770,8 +958,7 @@
       }
     }
   }
-
-  // timer
+  // timer   
 
   $('.otp-resend-btn').each(function () {
     let timerOn = true;
@@ -786,7 +973,7 @@
       remaining -= 1;
 
       if (remaining >= 0 && timerOn) {
-        document.getElementById('timer').style.display = "block";
+        document.getElementById('timer').style.display = 'block';
         setTimeout(function () {
           timer(remaining);
         }, 1000);
@@ -799,7 +986,7 @@
       }
 
       // Do timeout stuff here
-      document.getElementById('timer').style.display = "none";
+      document.getElementById('timer').style.display = 'none';
       // $('.resend_otp_dis').removeClass('disable');
       $('.otp-resend-btn').removeClass('disable');
     }
@@ -810,13 +997,12 @@
       $(this).addClass('disable');
       $('.gc_resend_text').text('resent');
       // $('.resend_otp_dis').addClass('disable');
-      timer($(this).data("time"));
-    })
+      timer($(this).data('time'));
+    });
   });
 
   $('.view-pdf').on('click', function () {
     var pdf_link = $(this).attr('href');
-
   });
 </script>
 </body>
