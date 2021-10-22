@@ -645,7 +645,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="">Enter your referal code</label>
-                        <input type="number" class="form-control" value="" placeholder="Referal Code">
+                        <input type="number" class="form-control" placeholder="Referal Code">
                     </div>
                     <button class="gc_btn_primary_v2 gc_btn_fluid_mob">Verify Code</button>
                     <button class="gc_btn_secondary_v2 gc_btn_fluid_mob" data-bs-dismiss="modal" aria-label="Close">Don't
@@ -710,22 +710,24 @@
     var $inputs = $this.find('input');
     var $inputId = $inputs.data('id');
     var $inputShow = $inputs.data('show');
+    var $inputHide = $inputs.data('hide');
+    var $inputValue = $inputs.val().toLowerCase();
+
 
     if ($inputs.prop('checked')) {
       $inputs.parents('.btn-input-box').addClass('active');
     }
 
     $inputs.on('change', function () {
-      $(`#${$inputId} .btn-input-box`).removeClass('active')
+      $(`#${$inputId} .btn-input-box`).removeClass('active');
       $inputs.parents('.btn-input-box').addClass('active');
 
-      if ($inputShow) {
-        console.log($inputShow);
-        $(`#${$inputShow}`).show();
-      }
-
-
+      if ($inputShow) $(`#${$inputShow}`).show("100");
+      if ($inputHide) $(`#${$inputHide}`).hide("100");
+      
+      console.log($inputs.val());
     });
+
   });
 
   $('.switch-otp').each(function () {

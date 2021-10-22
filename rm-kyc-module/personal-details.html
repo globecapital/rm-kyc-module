@@ -76,7 +76,7 @@
           <!-- <div class="sub-title">Please enter your details</div> -->
         </div>
 
-        <form action="personal-details.html">
+        <form action="bank-details.html">
           <div class="yourself-block">
             <div class="row">
               <div class="col-4">
@@ -180,11 +180,13 @@
                   <label for="">Is India your country of tax residency?</label>
                   <div class="btn-radio-flex" id="countryTaxResidency">
                     <div class="btn-radio-box btn-input-box">
-                      <input type="radio" checked value="Yes" data-id="countryTaxResidency" name="taxResidency">
+                      <input type="radio" checked value="Yes" data-hide="showpolitically" data-id="countryTaxResidency"
+                        name="taxResidency">
                       <span>Yes</span>
                     </div>
                     <div class="btn-radio-box btn-input-box">
-                      <input type="radio" value="No" data-id="countryTaxResidency" name="taxResidency">
+                      <input type="radio" value="No" data-show="showpolitically" data-id="countryTaxResidency"
+                        name="taxResidency">
                       <span>No</span>
                     </div>
                   </div>
@@ -196,11 +198,13 @@
                   <label for="">Are you Politically exposed?</label>
                   <div class="btn-radio-flex">
                     <div class="btn-radio-box btn-input-box">
-                      <input type="radio" value="Yes" data-id="politically" data-show="showpolitically" name="politicallyExposed">
+                      <input type="radio" value="Yes" data-id="politically" data-show="showpExposed"
+                        name="politicallyExposed">
                       <span>Yes</span>
                     </div>
                     <div class="btn-radio-box btn-input-box">
-                      <input type="radio" checked value="No" data-id="politically" data-show="showpExposed" name="politicallyExposed">
+                      <input type="radio" checked value="No" data-id="politically" data-hide="showpExposed"
+                        name="politicallyExposed">
                       <span>No</span>
                     </div>
                   </div>
@@ -238,7 +242,8 @@
                 <div class="col-4">
                   <div class="form-group">
                     <label class="select-label" for="">Tax payer identification number</label>
-                    <input type="text" class="form-control" value="12345647989" placeholder="Tax payer identification number">
+                    <input type="text" class="form-control" value="12345647989"
+                      placeholder="Tax payer identification number">
                   </div>
                 </div>
               </div>
@@ -252,29 +257,33 @@
               </div>
             </div>
             <div id="showpExposed" class="no-display">
-              asasas
+              <div class="row">
+                <div class="col-8">
+                  <div class="form-group">
+                    <label class="select-label" for="">Comment</label>
+                    <textarea class="form-control" placeholder="Comment"></textarea>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="d-grid gap-3 d-md-block">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="authentication">
+              <input class="form-check-input" type="checkbox" id="authentication">
               <label class="form-check-label" for="authentication">Quarterly Running Account authentication</label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                I
-                accept the&nbsp; <a class="view-tirms" data-bs-toggle="modal"
-                  data-pdf="https://docs.marklogic.com/guide/node-dev.pdf" data-bs-target="#terms">terms &amp;
-                  conditions</a>
+              <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">I accept the&nbsp; <a class="view-tirms"
+                  data-bs-toggle="modal" data-bs-target="#terms">terms &amp; conditions</a>
               </label>
             </div>
           </div>
 
           <div class="d-grid gap-3 d-md-block">
-            <a href="account-code.html" class="btn btn-outline-primary bold btn-back">Back</a>
-            <a href="personal-details.html" class="btn btn-borderd-primary bold btn-min-width">Next</a>
+            <a href="pan-details.html" class="btn btn-outline-primary bold btn-back">Back</a>
+            <a href="bank-details.html" class="btn btn-borderd-primary bold btn-min-width">Next</a>
           </div>
         </form>
         <!-- <div class="form-info text-center">Already have an account? <a class="bold" href="">LogIn</a></div> -->
@@ -862,7 +871,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="">Enter your referal code</label>
-                        <input type="number" class="form-control" value="" placeholder="Referal Code">
+                        <input type="number" class="form-control" placeholder="Referal Code">
                     </div>
                     <button class="gc_btn_primary_v2 gc_btn_fluid_mob">Verify Code</button>
                     <button class="gc_btn_secondary_v2 gc_btn_fluid_mob" data-bs-dismiss="modal" aria-label="Close">Don't
@@ -927,22 +936,24 @@
     var $inputs = $this.find('input');
     var $inputId = $inputs.data('id');
     var $inputShow = $inputs.data('show');
+    var $inputHide = $inputs.data('hide');
+    var $inputValue = $inputs.val().toLowerCase();
+
 
     if ($inputs.prop('checked')) {
       $inputs.parents('.btn-input-box').addClass('active');
     }
 
     $inputs.on('change', function () {
-      $(`#${$inputId} .btn-input-box`).removeClass('active')
+      $(`#${$inputId} .btn-input-box`).removeClass('active');
       $inputs.parents('.btn-input-box').addClass('active');
 
-      if ($inputShow) {
-        console.log($inputShow);
-        $(`#${$inputShow}`).show();
-      }
-
-
+      if ($inputShow) $(`#${$inputShow}`).show("100");
+      if ($inputHide) $(`#${$inputHide}`).hide("100");
+      
+      console.log($inputs.val());
     });
+
   });
 
   $('.switch-otp').each(function () {

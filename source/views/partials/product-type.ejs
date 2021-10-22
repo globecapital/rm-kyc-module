@@ -3,24 +3,63 @@
     <div class="signup-wrapper">
       <!-- step 1 -->
       <!-- add/remove class "in" to show/hide block -->
-      <div class="signup-form mini-card">
-        <div class="page-title">
-          <h1 class="title">Activate Margin Trading Facility</h1>
-          <p>We wish to inform you that, Globe is now offering Margin Trading Facility (MTF) to its customer as per the new SEBI guidelines.</p>
+      <div class="block-steps large">
+        <div class="card-title">Product Type</div>
+        <div class="card-number"><span>2</span>/3</div>
+      </div>
+      <div class="signup-form">
+        <div class="page-title with-margin">
+          <h2 class="sub-title">Choose the investment options that work for you</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
           <!-- <div class="sub-title">Please enter your details</div> -->
         </div>
 
-        <form action="one-time-password.html">
-          <div class="block-steps">
-            <div class="card-title">Client Verification</div>
-            <div class="card-number"><span>2</span>/3</div>
+        <form action="bank-details.html">
+          <div class="yourself-block">
+            <div class="form-group-box">
+              <label for="">Account Type</label>
+              <div class="btn-radio-flex" id="radio1">
+                <div class="btn-radio-box btn-input-box">
+                  <input type="radio" checked value="Equity" data-id="radio1" name="radio1">
+                  <span>Equity</span>
+                </div>
+                <div class="btn-radio-box btn-input-box">
+                  <input type="radio" value="Derivatives" data-id="radio1" name="radio1">
+                  <span>Derivatives</span>
+                </div>
+                <div class="btn-radio-box btn-input-box">
+                  <input type="radio" value="Commodity" data-id="radio1" name="radio1">
+                  <span>Commodity</span>
+                </div>
+                <div class="btn-radio-box btn-input-box">
+                  <input type="radio" value="Current" data-id="radio1" name="radio1">
+                  <span>Current</span>
+                </div>
+                <div class="btn-radio-box btn-input-box">
+                  <input type="radio" value="Mutual Fund" data-id="radio1" name="radio1">
+                  <span>Mutual Fund</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group-box">
+              <label for="">Your prefereered Demat partner</label>
+              <div class="btn-radio-flex" id="radio1">
+                <div class="btn-radio-box btn-input-box">
+                  <input type="radio" checked value="NSDL" data-id="radio1" name="radio1">
+                  <span>NSDL</span>
+                </div>
+                <div class="btn-radio-box btn-input-box">
+                  <input type="radio" value="CDSL" data-id="radio1" name="radio1">
+                  <span>CDSL</span>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="form-group required">
-            <input type="text" class="form-control floating-label" placeholder="Client Code">
-            <span class="error">Please enter the Client Code</span>
-          </div>
-          <div class="d-grid gap-2">
-            <button class="btn btn-borderd-primary bold ">Activate Now</button>
+
+          <div class="d-grid gap-3 d-md-block button-margin">
+            <a href="bank-details.html" class="btn btn-outline-primary bold btn-back">Back</a>
+            <a href="pricing-plan.html" class="btn btn-borderd-primary bold btn-min-width">Next</a>
           </div>
         </form>
         <!-- <div class="form-info text-center">Already have an account? <a class="bold" href="">LogIn</a></div> -->
@@ -28,6 +67,5 @@
       <!-- /step 1 -->
 
     </div>
-
   </div>
 </section>

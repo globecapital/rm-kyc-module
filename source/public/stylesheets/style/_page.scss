@@ -225,6 +225,10 @@
 		background-color: lighten($primary, 45%);
 	}
 }
-.no-display{
+.no-display {
 	display: none;
+}
+
+.button-margin {
+	margin-top: $font-size-base * 5 !important;
 }
