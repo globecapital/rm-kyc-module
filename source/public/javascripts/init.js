@@ -2,6 +2,13 @@ $(function () {
 	// Move to top button appand in web layout
 	$.icodetutsfrminput.init();
 
+	var tooltipTriggerList = [].slice.call(
+		document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	);
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl);
+	});
+
 	$('body').prepend(
 		"<div id='move-top' class='btn btn-theme hoverable move-top'><i class='fa fa-arrow-up'></i></div>"
 	);
@@ -41,34 +48,7 @@ $(function () {
 		$(this).find('[autofocus]').focus();
 		$.icodetutsfrminput.init();
 	});
-
-	// fileupload
-	$.fn.fileUploader = function (filesToUpload) {
-		this.closest('.files').on('change', function (evt) {
-			for (var i = 0; i < evt.target.files.length; i++) {
-				filesToUpload.push(evt.target.files[i]);
-			}
-			var output = [];
-
-			for (var i = 0, f; (f = evt.target.files[i]); i++) {
-				var removeLink =
-					'<a class="removeFile" href="#" data-fileid="' + i + '"></a>';
-
-				output.push(
-					'<li><span>',
-					escape(f.name),
-					'-',
-					f.size,
-					' bytes.</span> ',
-					removeLink,
-					'</li> '
-				);
-			}
-
-			$(this).children('.fileList').append(output.join(''));
-		});
-	};
-
+ 
 	// -------------
 
 	$('.pickDate').datepicker({
@@ -97,19 +77,6 @@ $(function () {
 	});
 
 	$('.pickDate').attr('autocomplete', 'off');
-
-	// checkbox
-	// $('.btn-checkbox-box input').each(function () {
-	// 	$(this).prop('checked')
-	// 		? $(this).parents('.btn-checkbox-box').addClass('checked')
-	// 		: $(this).parents('.btn-checkbox-box').removeClass('checked');
-	// });
-
-	// $('.btn-radio-box input').each(function () {
-	// 	$(this).prop('checked')
-	// 		? $(this).parents('.btn-radio-box').addClass('checked')
-	// 		: $(this).parents('.btn-radio-box').removeClass('checked');
-	// });
 });
 
 // JQuery UI Datepicker Config
@@ -137,8 +104,30 @@ $(window).on('load resize', function () {
 	});
 });
 
-// Replace all SVG images with inline SVG
-function svgInline() {
+// AOS starts
+function aosAnimate() {
+	AOS.init({
+		offset: 0,
+		duration: 800,
+		easing: 'ease-in-out-cubic',
+		once: true,
+	});
+}
+// AOS ends
+
+// window load functions
+$(window).on('load', function () {
+	aosAnimate();
+	//	signaturePad();
+
+	// data-aos-delay remove on mobile
+	if ($(window).width() < 768) {
+		$('div').each(function () {
+			$(this).attr('data-aos-delay', '0');
+		});
+	}
+	//
+	// Replace all SVG images with inline SVG
 	jQuery('img.svg').each(function () {
 		var $img = jQuery(this);
 		var imgID = $img.attr('id');
@@ -169,31 +158,4 @@ function svgInline() {
 			'xml'
 		);
 	});
-}
-
-// AOS starts
-function aosAnimate() {
-	AOS.init({
-		offset: 0,
-		duration: 800,
-		easing: 'ease-in-out-cubic',
-		once: true,
-	});
-}
-// AOS ends
-
-// window load functions
-$(window).on('load', function () {
-	aosAnimate();
-	svgInline();
-	//	signaturePad();
-
-	// data-aos-delay remove on mobile
-	if ($(window).width() < 768) {
-		$('div').each(function () {
-			$(this).attr('data-aos-delay', '0');
-		});
-	}
-	//
-
 });

@@ -1,0 +1,121 @@
+//
+// social link
+// --------------------------------------------------
+
+// .pricing-card-block {
+// 	max-width: 80%;
+// }
+
+.documents-card-block {
+	max-width: 860px;
+}
+.documents-card {
+	border: 1px solid lighten($primary, 43%);
+	background-color: lighten($gray-600, 53%);
+	border-radius: 5px;
+	padding: 25px $font-size-base;
+	text-align: center;
+	position: relative;
+
+	&.active {
+		background-color: lighten($primary, 45%);
+
+		.doc-card-check {
+			@include opacity(1);
+		}
+	}
+}
+
+.doc-card {
+	text-align: center;
+
+	&-check {
+		position: absolute;
+		width: $font-size-base * 1.12;
+		height: $font-size-base * 1.12;
+		background: lighten($primary, 10%);
+		// background: #1e7ae0;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		right: 6px;
+		top: 6px;
+		@include opacity(0);
+		padding: $font-size-base * 0.25;
+
+		img {
+		}
+
+		&.in {
+			opacity: 1;
+		}
+	}
+	&-img {
+		width: 34px;
+		height: 34px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		position: relative;
+		z-index: 1;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			background: #e9f7fd;
+			top: 0;
+			z-index: -1;
+		}
+	}
+
+	&-title {
+		font-size: 12px;
+		font-family: $font-family-poppins;
+		color: #262424;
+		min-height: 28px;
+		margin-bottom: $font-size-base;
+		line-height: $font-size-base;
+	}
+
+	&-btn {
+		a {
+			font-size: 12px;
+			font-family: $font-family-poppins;
+			color: lighten($primary, 10%);
+			border: #c0d6f3 1px solid;
+			border-radius: 5px;
+			height: 30px;
+			font-weight: 600;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 $font-size-base;
+			line-height: 100%;
+			transition: 0.35s ease-in-out;
+			padding-top: 1px;
+
+			&:hover {
+				text-decoration: none;
+				background: lighten($primary, 5%);
+				color: #c0d6f3;
+			}
+		}
+	}
+	&-info {
+		font-size: $font-size-base * 0.65;
+		color: #818181;
+		line-height: $font-size-base;
+		text-align: center;
+		padding: 4px;
+
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -78,8 +78,8 @@
 
         <form action="personal-details.html">
           <div class="form-group">
-            <div class="text-control floating-text text-uppercase" data-icon="fa fa-check-circle icon" data-verified="true"
-              placeholder="PAN">ABCDE1234A <a data-bs-toggle="modal" data-bs-target="#editNumber"
+            <div class="text-control floating-text text-uppercase" data-icon="fa fa-check-circle icon"
+              data-verified="true" placeholder="PAN">ABCDE1234A <a data-bs-toggle="modal" data-bs-target="#editNumber"
                 class="help-edit"><img src="images/pencil.svg" alt="">Edit</a></div>
           </div>
           <div class="form-group">
@@ -88,7 +88,7 @@
               placeholder="DOB">04/09/1999 <a data-bs-toggle="modal" data-bs-target="#editEmailidLabel"
                 class="help-edit"><img src="images/pencil.svg" alt="">Edit</a></div>
           </div>
-          <div class="d-grid gap-3  d-md-block">
+          <div class="buttons-grid gap-3 d-md-block button-margin-lg">
             <a href="account-code.html" class="btn btn-outline-primary bold btn-back">Back</a>
             <a href="personal-details.html" class="btn btn-borderd-primary bold btn-min-width">Next</a>
           </div>
@@ -194,7 +194,7 @@
     </div>
   </div>
 </footer>
-<div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="uploadCheckLabel" aria-hidden="true">
+<div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header-terms">
@@ -647,35 +647,121 @@
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="referal" tabindex="-1" role="dialog" aria-labelledby="referalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+<div class="modal fade" id="accountRejected" tabindex="-1" role="dialog" aria-labelledby="accountRejectedLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-padding" role="document">
         <div class="modal-content">
+            
             <div class="modal-header-terms">
-                <h5 class="modal-title with-center"> RIGHTS & OBLIGATIONS OF STOCK BROKERS & CLIENTS FOR MARGIN TRADING
-                    FACILITY (MTF) AS PRESCRIBED BY NSE:</h5>
+                <h5 class="title with-center">Rejected</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="">
                 <div class="modal-body">
-                    <div class="form-group">
-                        <label for="">Enter your referal code</label>
-                        <input type="number" class="form-control" placeholder="Referal Code">
-                    </div>
-                    <button class="gc_btn_primary_v2 gc_btn_fluid_mob">Verify Code</button>
-                    <button class="gc_btn_secondary_v2 gc_btn_fluid_mob" data-bs-dismiss="modal" aria-label="Close">Don't
-                        Have</button>
+                   <ul class="list-rej">
+                       <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quae expedita autem doloribus. Sequi, sapiente! Asperiores vero accusantium voluptates eum. Sequi quasi inventore esse nam voluptatibus eaque vero id quaerat?</li>
+                       <li>Atque corrupti, expedita ipsa debitis veritatis aliquam. Aspernatur possimus voluptatem optio dolorum quam tempore earum ipsum odit obcaecati vero quasi ab, quibusdam omnis? Laudantium repellat, expedita corporis laborum doloribus reiciendis?</li>
+                       <li>Veritatis et vel aspernatur esse, consectetur ad quia amet commodi explicabo, inventore modi rerum perferendis, deserunt culpa dolores ducimus! Sint itaque temporibus eius dolor et beatae eligendi aperiam omnis repellat.</li>
+                       <li>Quod perferendis itaque quo nobis ex, a in? Fuga molestiae pariatur ea molestias porro ratione ab. Error nostrum asperiores saepe quo nam adipisci officia commodi laboriosam. Soluta iste ab temporibus!</li>
+                   </ul>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-outline-primary bold btn-min-width" data-bs-dismiss="modal">Close</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-
+<div class="modal fade" id="editEmailidLabel" tabindex="-1" role="dialog" aria-labelledby="editEmailidLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-padding" role="document">
+        <div class="modal-content">
+            <div class="modal-header-terms">
+                <h5 class="title with-center">Edit Email Id</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="number" placeholder="Enter e-mail Id" autofocus class="form-control floating-label"
+                            value="hinkjdendowd@gmail.com">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="forgotPassword" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-padding" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-header-terms">
+                <h5 class="title with-center"> Forgot Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter e-mail Id" autofocus class="form-control floating-label"
+                            value="hinkjdendowd@gmail.com">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="packPlanes" tabindex="-1" role="dialog" aria-labelledby="packPlanes">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-padding" role="document">
+        <div class="modal-content">
+            <div class="modal-header-terms">
+                <h5 class="title with-center"> Forgot Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-plans-body">
+                <div class="section-plans"></div>
+            </div>
+            <div class="modal-footer justify-content-start">
+                <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-borderd-primary bold">This works for me</button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body modal-padding ">
+                <h3 class="pop-heading"></h3>
+                <h4 class="pop-content"></h4>
+                <h4 class="pop-price"></h4>
+                <button type="button" class="btn close-modal" data-dismiss="modal" aria-label="Close"><span
+                        class="fa fa-close"></span></button>
+                <div class="alert-contant">
+                    <div class="section-terms-article">
+                        <div class="pricing-section">
+                            <div class="faqlist-panel-section modalPriceinfo" id="FAQWrapper" role="tablist"
+                                aria-multiselectable="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
 <div class="modal fade" id="editNumber" tabindex="-1" role="dialog" aria-labelledby="editNumberLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-md modal-dialog-centered modal-padding" role="document">
         <div class="modal-content">
             <div class="modal-header-terms">
+                <h5 class="title with-center">Edit Mobile Number</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="">
@@ -693,23 +779,143 @@
         </div>
     </div>
 </div>
-
-
-<div class="modal fade" id="editEmailidLabel" tabindex="-1" role="dialog" aria-labelledby="editEmailidLabel"
+<div class="modal fade" id="uploadCheck" tabindex="-1" role="dialog" aria-labelledby="uploadCheckLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-md modal-dialog-centered modal-padding" role="document">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-upload" role="document">
         <div class="modal-content">
             <div class="modal-header-terms">
+                <h5 class="title with-center">Sign File</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="">
+                <div class="modal-body with-upload">
+                    <div class="page-files-upload" id="uploadCheckFile">
+                        <!-- <ul class="fileList"></ul> -->
+                        <label for="uploadCheckFile" class="files-card">
+                            <input type="file" data-id="uploadCheckFile" name="uploadCheckFile">
+                            <i class="fa fa-plus icons"></i> Add file
+                        </label>
+                        <a href="#" class="send-link"><i class="fa fa-link icons"></i> <span class="text">Sand Link by SMS or Email</span></a>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="uploadPancard" tabindex="-1" role="dialog" aria-labelledby="uploadPancardLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-upload" role="document">
+        <div class="modal-content">
+            <div class="modal-header-terms">
+                <h5 class="title with-center">Sign File</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="">
                 <div class="modal-body">
-                    <div class="form-group">
-                        <input type="number" placeholder="Enter e-mail Id" autofocus class="form-control floating-label"
-                            value="hinkjdendowd@gmail.com">
+                    <div class="page-files-upload" id="uploadPancardFile">
+                        <!-- <ul class="fileList"></ul> -->
+                        <label for="uploadPancardFile" class="files-card">
+                            <input type="file" data-id="uploadPancardFile" name="uploadPancardFile">
+                            <i class="fa fa-plus icons"></i> Add file
+                        </label>
+                        <a href="#" class="send-link"><i class="fa fa-link icons"></i> <span class="text">Sand Link by SMS or Email</span></a>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer justify-content-start">
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="uploadPhoto" tabindex="-1" role="dialog" aria-labelledby="uploadPhotoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-upload" role="document">
+        <div class="modal-content">
+            <div class="modal-header-terms">
+                <h5 class="title with-center">Sign File</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="page-files-upload" id="uploadPhotoFile">
+                        <!-- <ul class="fileList"></ul> -->
+                        <label for="uploadPhotoFile" class="files-card">
+                            <input type="file" data-id="uploadPhotoFile" name="uploadPhotoFile">
+                            <i class="fa fa-plus icons"></i> Add file
+                        </label>
+                        <a href="#" class="send-link"><i class="fa fa-link icons"></i> <span class="text">Sand Link by SMS or Email</span></a>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="uploadSign" tabindex="-1" role="dialog" aria-labelledby="uploadSignLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-upload" role="document">
+        <div class="modal-content">
+            <div class="modal-header-terms">
+                <h5 class="title with-center">Sign File</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="page-files-upload" id="uploadSignFile">
+                        <!-- <ul class="fileList"></ul> -->
+                        <ul class="uploded-file-List" style="max-height: 473.5px; overflow: auto;">
+                            <li><span class="uploded-file"><i class="fa fa-file icons"></i>
+                                    <span class="name">tripadvisor-icon-png-6.jpg</span>
+                                    <span class="size">34.63 kB</span>
+                                </span>
+                                <a class="removeFile" data-fileid="0"><i class="fa fa-trash icons remove"></i></a>
+                            </li>
+                        </ul>
+                        <label for="uploadSignFile" class="files-card">
+                            <input type="file" data-id="uploadSignFile" name="uploadSignFile">
+                            <i class="fa fa-plus icons"></i> Add file
+                        </label>
+                        <a href="#" class="send-link"><i class="fa fa-link icons"></i> <span class="text">Sand Link by
+                                SMS or Email</span></a>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="uploadStatement" tabindex="-1" role="dialog" aria-labelledby="uploadStatementLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-upload" role="document">
+        <div class="modal-content">
+            <div class="modal-header-terms">
+                <h5 class="title with-center">Sign File</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <div class="page-files-upload" id="uploadStatementFile">
+                        <!-- <ul class="fileList"></ul> -->
+                        <label for="uploadStatementFile" class="files-card">
+                            <input type="file" data-id="uploadStatementFile" name="uploadStatementFile">
+                            <i class="fa fa-plus icons"></i> Add file
+                        </label>
+                        <a href="#" class="send-link"><i class="fa fa-link icons"></i> <span class="text">Sand Link by SMS or Email</span></a>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
                     <button type="button" class="btn btn-outline-primary bold" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-borderd-primary bold">Save changes</button>
                 </div>
@@ -739,19 +945,38 @@
 
       if ($inputShow) $(`#${$inputShow}`).show("100");
       if ($inputHide) $(`#${$inputHide}`).hide("100");
-      
       console.log($inputs.val());
     });
 
   });
 
-  $('.switch-otp').each(function () {
-    var $toggleOtp = $(this);
-    otpCardId = $toggleOtp.data('id');
+  $('.btn-input-check').each(function () {
+    var $this = $(this);
+    var $inputs = $this.find('input');
+
+    $inputs.filter(':notmdproc')
+      .data('mdproc', true)
+      .after("<span class='check'></span>");
+
+    if ($inputs.prop('checked')) {
+      $inputs.parents(".btn-input-check").addClass('active');
+    }
+    if ($inputs.prop('disabled')) {
+      $inputs.parents(".btn-input-check").addClass('disabled');
+    }
+    $inputs.on('change click', function () {
+      // $inputs.parents(".btn-input-check").addClass('active');
+      $inputs.parents(".btn-input-check").addClass('active');
+
+      if (!$inputs.prop('checked')) {
+        $inputs.parents(".btn-input-check").removeClass('active');
+      }
+    });
+
   });
 
   function getCodeBoxElement(index) {
-    return document.getElementById(otpCardId + index);
+    return document.getElementById("codeBox" + index);
   }
 
   function onKeyUpEvent(index, event) {
@@ -824,6 +1049,188 @@
 
   $('.view-pdf').on('click', function () {
     var pdf_link = $(this).attr('href');
+  });
+
+
+  $(document).ready(function () {
+    $('#packPlanes').on('show.bs.modal', function (event) {
+      var windowsHight = $(window).height();
+      var button = $(event.relatedTarget); // Button that triggered the modal
+      var recipient = button.data('target-content'); // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      // $(".welcome-panel").css("min-height", (windowsHight - (footerHeight * 2.10)));
+      var modal = $(this);
+      var plans = $(recipient).find('.pricing-plan');
+      var heading = plans.find('.pricing-title').text();
+
+      var modalPlansCard = modal.find('.section-plans');
+
+      // var popPackInfo = $(recipient).find('.pricing-section').html();
+      // console.log(headedddd);
+      // $('.faqlist-panel-section').accordion();
+
+      modal.find('h5.title').text(heading);
+      modalPlansCard.css("height", windowsHight / 2);
+
+
+      var data = $(recipient).find('.plan-detail-card');
+      // console.log(data.find('.pack-panel-artical').length);
+      var items = data.find('.pack-panel-artical').length;
+
+      console.log(items);
+      // modal.find('.modal-body input').val(recipient)
+
+      data.find('.pack-panel-artical').each(function (index, element) {
+        // console.log($(this).find('.pack-header').text());
+        var title = $(this).find('.title').text();
+        var content = $(this).find('.body').html();
+        // console.log(index);
+
+        // if (index == 0) {
+        //   console.log(index);
+        // } else {
+        //   console.log(index);
+        // }
+
+        modalPlansCard.append(
+          '<div class="advisor-card">' +
+          '<div class="title">' + title + '</div>' +
+          content +
+          '</div>'
+        );
+      });
+    });
+
+    $('#packPlanes').on('hidden.bs.modal', function (e) {
+      $('.section-plans').html('');
+    })
+  });
+
+
+
+  // $.fn.fileUploader = function (filesToUpload) {
+  //   this.closest('.page-files-upload').on('change', function (evt) {
+  //     for (var i = 0; i < evt.target.files.length; i++) {
+  //       filesToUpload.push(evt.target.files[i]);
+  //     }
+  //     var output = [];
+
+  //     console.log(filesToUpload);
+
+  //     for (var i = 0, uploadfile;
+  //       (uploadfile = evt.target.files[i]); i++) {
+  //       var removeLink =
+  //         '<a class="removeFile" href="#" data-fileid="' + i + '"><i class="fa fa-trash icons"></i></a>';
+
+  //       output.push(
+  //         '<li><span class="uploded-file">',
+  //         '<span class="name">' + escape(uploadfile.name) + '</span> ',
+  //         // '<span class="size">' + uploadfile.size + ' bytes.</span> ',
+  //         '<span class="size">' + filesize(uploadfile.size) + '</span> ',
+  //         '</span>' + removeLink,
+  //         '</li> '
+  //       );
+  //     }
+
+  //     $(this).children('.fileList').append(output.join(''));
+  //   });
+  // };
+
+  // var filesToUpload = [];
+
+  // $(document).on("click", ".removeFile", function (e) {
+  //   e.preventDefault();
+  //   var fileName = $(this).parent().children("strong").text();
+  //   // loop through the files array and check if the name of that file matches FileName
+  //   // and get the index of the match
+  //   for (i = 0; i < filesToUpload.length; ++i) {
+  //     if (filesToUpload[i].name == fileName) {
+  //       //console.log("match at: " + i);
+  //       // remove the one element at the index where we get a match
+  //       filesToUpload.splice(i, 1);
+  //     }
+  //   }
+  //   //console.log(filesToUpload);
+  //   // remove the <li> element of the removed file from the page DOM
+  //   $(this).parent().remove();
+  // });
+
+  // $("#uploadCheckFile").fileUploader(filesToUpload);
+  // $("#uploadStatementFile").fileUploader(filesToUpload);
+  // $("#uploadSignFile").fileUploader(filesToUpload);
+  // $("#uploadPancardFile").fileUploader(filesToUpload);
+  // $("#uploadResumeFile").fileUploader(filesToUpload);
+
+
+  // $("#uploadBtn").click(function (e) {
+  //   e.preventDefault();
+  // });
+
+
+  $('.page-files-upload').each(function () {
+    var $this = $(this);
+    var windowsHight = $(window).height();
+
+    var $fileInputs = $this.find('.files-card').find('input');
+    var $fileInputId = $fileInputs.data('id');
+    // var $fileRemoveLink = $(`#${$fileInputId}`).;
+    // console.log($fileInputId);
+    var filesToUpload = [];
+    // console.log(filesToUpload.length);
+    if (filesToUpload.length === 0) {
+      $(`#${$fileInputId}`).prepend('<ul class="uploded-file-List"></ul>')
+    }
+
+    $fileInputs.on('change', function (evt) {
+
+      for (var i = 0; i < evt.target.files.length; i++) {
+        filesToUpload.push(evt.target.files[i]);
+        // filesToUpload.push(evt.target.files[i]);
+      }
+      var output = [];
+
+      for (var i = 0, uploadfile;
+        (uploadfile = evt.target.files[i]); i++) {
+        var removeLink =
+          '<a class="removeFile" data-fileid="' + i + '"><i class="fa fa-trash icons remove"></i></a>';
+
+        output.push(
+          '<li><span class="uploded-file"><i class="fa fa-file icons"></i>',
+          '<span class="name">' + escape(uploadfile.name) + '</span> ',
+          // '<span class="size">' + uploadfile.size + ' bytes.</span> ',
+          '<span class="size">' + filesize(uploadfile.size) + '</span> ',
+          '</span>' + removeLink,
+          '</li> '
+        );
+      }
+
+      $(`#${$fileInputId}`).children('.uploded-file-List').append(output.join(''));
+    });
+
+    $(document).on("click", ".removeFile", function (e) {
+      e.preventDefault();
+      var fileName = $(this).parent().text();
+      // loop through the files array and check if the name of that file matches FileName
+      // and get the index of the match
+      for (i = 0; i < filesToUpload.length; ++i) {
+        if (filesToUpload[i].name == fileName) {
+          //console.log("match at: " + i);
+          // remove the one element at the index where we get a match
+          filesToUpload.splice(i, 1);
+        }
+      }
+
+      // console.log(fileName);
+      // remove the <li> element of the removed file from the page DOM
+      $(this).parent().remove();
+    });
+
+    $(`#${$fileInputId}`).children('.uploded-file-List').css({
+      maxHeight: windowsHight / 2,
+      "overflow": "auto",
+    });
+
   });
 </script>
 </body>

@@ -16,14 +16,16 @@
 
 // Core CSS
 @import 'style/button';
-// @import 'style/button-border';
-
+@import 'style/dashboard';
+@import 'style/button-border';
 @import 'style/page';
 @import 'style/modal';
+@import 'style/table-pagination';
 @import 'style/page-signup';
 @import 'style/navbar';
 @import 'style/soical-link';
 @import 'style/form-control';
-@import 'style/button-border';
-@import 'style/footer'; 
+@import 'style/documents';
+@import 'style/pricing-plan';
+@import 'style/footer';
 // @import 'style/modal-login';

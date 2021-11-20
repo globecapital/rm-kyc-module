@@ -116,7 +116,7 @@
 .page-title {
 	margin-bottom: $font-size-base;
 	&.with-margin {
-		margin-bottom: $font-size-base * 4;
+		margin-bottom: $font-size-base * 3;
 	}
 	.title {
 		font-size: 125%;
@@ -129,6 +129,13 @@
 		font-weight: 500 !important;
 		margin-bottom: $font-size-base;
 		margin-top: $font-size-base * 1.5;
+	}
+	.thankyou-file {
+		margin-top: $font-size-base * 3;
+		.text {
+			font-size: 80%;
+			margin-left: $font-size-base * 0.5;
+		}
 	}
 	@include media-breakpoint-up(sm) {
 		.title {
@@ -187,7 +194,8 @@
 		}
 	}
 }
-.btn-radio-flex {
+.btn-radio-flex,
+.btn-check-flex {
 	display: flex;
 }
 
@@ -203,7 +211,8 @@
 	margin-bottom: $form-group-margin;
 }
 
-.btn-radio-box {
+.btn-radio-box,
+.btn-check-box {
 	display: block;
 	padding: $font-size-base * 0.4 $font-size-base * 1.5;
 	position: relative;
@@ -219,10 +228,24 @@
 		top: 0;
 		left: 0;
 		@include opacity(0);
+		z-index: 10;
 	}
 	&.active {
 		border-color: lighten($primary, 20%);
 		background-color: lighten($primary, 45%);
+	}
+
+	&.disabled {
+		cursor: not-allowed;
+		pointer-events: none;
+		filter: none;
+		border-color: $gray-500;
+		@include opacity(0.5);
+		input {
+			pointer-events: none;
+			filter: none;
+			cursor: not-allowed;
+		}
 	}
 }
 .no-display {
@@ -231,4 +254,13 @@
 
 .button-margin {
 	margin-top: $font-size-base * 5 !important;
+	&-sm {
+		margin-top: $font-size-base * 3 !important;
+	}
+	&-xs {
+		margin-top: $font-size-base * 1.5 !important;
+	}
+	&-lg {
+		margin-top: $font-size-base * 5 !important;
+	}
 }

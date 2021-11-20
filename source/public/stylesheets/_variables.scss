@@ -715,8 +715,8 @@ $table-striped-color:         $table-color !default;
 $table-striped-bg-factor:     .05 !default;
 $table-striped-bg:            rgba($black, $table-striped-bg-factor) !default;
 
-$table-active-color:          $table-color !default;
-$table-active-bg-factor:      .1 !default;
+$table-active-color:          lighten($table-color,40%) !default; 
+$table-active-bg-factor:      .05 !default;
 $table-active-bg:             rgba($black, $table-active-bg-factor) !default;
 
 $table-hover-color:           $table-color !default;
@@ -1431,7 +1431,7 @@ $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
 
 $modal-backdrop-bg:                 $black !default;
-$modal-backdrop-opacity:            .5 !default;
+$modal-backdrop-opacity:            .7 !default;
 $modal-header-border-color:         $border-color !default;
 $modal-footer-border-color:         $modal-header-border-color !default;
 $modal-header-border-width:         $modal-content-border-width !default;
@@ -1833,12 +1833,12 @@ $ui-datepicker-border-radius            : $border-radius-sm !default;
 $ui-datepicker-day-header-color         : $brand-default !default;
 $ui-datepicker-day-header-bg            : $white !default;
 
-$ui-datepicker-today-color              : $white !default;  
-$ui-datepicker-day-week-end-color       : $gray-100 !default; 
+$ui-datepicker-today-color              : $brand-default !default;  
+$ui-datepicker-day-week-end-color       : $gray-600 !default; 
 $ui-datepicker-day-disabled-color       : $gray-100 !default;
 $ui-datepicker-day-disabled-bg          : $white !default; 
-$ui-datepicker-other-month-bg           : $white  !default;
-$ui-datepicker-day-week-end-bg          : $white  !default;
+$ui-datepicker-other-month-bg           : $white  !default;  
+$ui-datepicker-day-week-end-bg          : $gray-600  !default;
 $ui-datepicker-header-padding-v:        $ui-padding-v !default;
 $ui-datepicker-header-padding-h:        $ui-padding-v !default;
 $ui-datepicker-header-margin:           0 !default;

@@ -19,7 +19,7 @@ label {
 		color: $danger;
 		margin-left: $font-size-base * 0.5;
 	}
-	label,
+	// label,
 	.control-label {
 		font-size: 85%;
 		font-weight: 400;
@@ -34,6 +34,7 @@ label {
 		padding: 2px 5px;
 		@include transition(0.15s ease-out);
 	}
+
 	label.select-label {
 		position: relative;
 		top: auto;
@@ -153,3 +154,14 @@ label {
 // textarea {
 // 	resize: vertical;
 // }
+
+.form-password {
+	text-align: center;
+	margin: $font-size-base auto;
+}
+
+.view-password {
+	cursor: pointer;
+	font-weight: 600;
+	font-size: $font-size-base * 0.8;
+}
