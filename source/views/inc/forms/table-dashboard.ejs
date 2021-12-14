@@ -1,6 +1,6 @@
 <div class="table-pagination with-bg">
   <div class="table-responsive">
-    <table class="table  table-symbols">
+    <table class="table  table-symbols" id="holdingstable" width="100%">
       <thead>
         <tr>
           <th width="10%">Reference&nbsp;Number</th>
@@ -11,7 +11,7 @@
         </tr>
       </thead>
       <tbody>
-        <% for (var i =1; i <=5;  i++ ) { %>
+        <% for (var i =1; i <=50;  i++ ) { %>
 
         <% if (i == 3 ) { %>
         <tr class="table-active">
@@ -32,7 +32,8 @@
             <% }  else if (i == 3 ) { %>
             <span class="badge bg-secondary bold">Activated</span>
             <% }  else { %>
-            <a data-bs-toggle="modal" data-bs-target="#fSignDone" href="#"><span class="badge bg-success bold">F-Sign Done</span></a>
+            <a data-bs-toggle="modal" data-bs-target="#fSignDone" href="#"><span class="badge bg-success bold">F-Sign
+                Done</span></a>
 
             <% } %>
           </td>

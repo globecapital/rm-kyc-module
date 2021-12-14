@@ -917,6 +917,44 @@
 </div>
 
 <script type="text/javascript">
+  var muynewtable = $('#holdingstable,#kyctable').DataTable({
+    sDom: "t<'text-center table-bottom'l p>",
+    searching: true,
+    info: false,
+    bFilter: true,
+    // bPaginate: false,
+    destroy: true,
+    order: [],
+    sPaginationType: 'bootstrap',
+    responsive: true,
+    processing: true,
+    // serverSide:true,
+    columnDefs: [{
+      targets: 'no-sort',
+      orderable: false,
+    }],
+    oLanguage: {
+      sLengthMenu: '_MENU_ records per page',
+    },
+  });
+
+
+
+  // $(".search-input").on("input", function (e) {
+  //   e.preventDefault();
+  //   $('#holdingstable').DataTable().search($(this).val()).draw();
+  // });
+
+
+
+  $('.search-input').on('keyup change input', function (e) {
+    let search = $(this)
+    let theAudio = search.data('columns');
+    e.preventDefault();
+    console.log(theAudio);
+    muynewtable.columns(theAudio - 1).search(this.value).draw();
+  });
+
   // OTP page code
   $('.btn-input-box').each(function () {
     var $this = $(this);
@@ -1098,66 +1136,6 @@
       $('.section-plans').html('');
     })
   });
-
-
-
-  // $.fn.fileUploader = function (filesToUpload) {
-  //   this.closest('.page-files-upload').on('change', function (evt) {
-  //     for (var i = 0; i < evt.target.files.length; i++) {
-  //       filesToUpload.push(evt.target.files[i]);
-  //     }
-  //     var output = [];
-
-  //     console.log(filesToUpload);
-
-  //     for (var i = 0, uploadfile;
-  //       (uploadfile = evt.target.files[i]); i++) {
-  //       var removeLink =
-  //         '<a class="removeFile" href="#" data-fileid="' + i + '"><i class="fa fa-trash icons"></i></a>';
-
-  //       output.push(
-  //         '<li><span class="uploded-file">',
-  //         '<span class="name">' + escape(uploadfile.name) + '</span> ',
-  //         // '<span class="size">' + uploadfile.size + ' bytes.</span> ',
-  //         '<span class="size">' + filesize(uploadfile.size) + '</span> ',
-  //         '</span>' + removeLink,
-  //         '</li> '
-  //       );
-  //     }
-
-  //     $(this).children('.fileList').append(output.join(''));
-  //   });
-  // };
-
-  // var filesToUpload = [];
-
-  // $(document).on("click", ".removeFile", function (e) {
-  //   e.preventDefault();
-  //   var fileName = $(this).parent().children("strong").text();
-  //   // loop through the files array and check if the name of that file matches FileName
-  //   // and get the index of the match
-  //   for (i = 0; i < filesToUpload.length; ++i) {
-  //     if (filesToUpload[i].name == fileName) {
-  //       //console.log("match at: " + i);
-  //       // remove the one element at the index where we get a match
-  //       filesToUpload.splice(i, 1);
-  //     }
-  //   }
-  //   //console.log(filesToUpload);
-  //   // remove the <li> element of the removed file from the page DOM
-  //   $(this).parent().remove();
-  // });
-
-  // $("#uploadCheckFile").fileUploader(filesToUpload);
-  // $("#uploadStatementFile").fileUploader(filesToUpload);
-  // $("#uploadSignFile").fileUploader(filesToUpload);
-  // $("#uploadPancardFile").fileUploader(filesToUpload);
-  // $("#uploadResumeFile").fileUploader(filesToUpload);
-
-
-  // $("#uploadBtn").click(function (e) {
-  //   e.preventDefault();
-  // });
 
 
   $('.page-files-upload').each(function () {
